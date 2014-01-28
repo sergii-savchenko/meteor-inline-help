@@ -1,6 +1,6 @@
 <Template name="_helpPopover">
 
-  <span class="show-help"><a id={{key}} class="show-help-link" data-toggle="popover" {{#if title}}title=
+<a id={{key}} class="show-help-link" data-toggle="popover" {{#if title}}title=
   '{{title}}' {{/if}} data-content='{{#markdown}}{{message}}{{/markdown}} {{#if url}}<a href="{{url}}" class="" target="_blank">Read More</a> {{/if}}' type="button">
     <i class="fa fa-question-circle show-help-icon"></i>
   </a>
@@ -9,5 +9,5 @@
       InlineHelp._initPopover('{{key}}');
     </script>
   {{/if}}
-  </span>
+
 </Template>
