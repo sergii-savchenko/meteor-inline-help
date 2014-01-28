@@ -3,6 +3,6 @@
   "description": "This is a simple inline help package for Meteor. Fork of inline-help (ttps://github.com/pahans/meteor-inline). Icon changed",
   "homepage": "https://github.com/sergii-savchenko/meteor-inline-help",
   "author": "Sergii Savchenko <sergii.savchenko@me.com>",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "git": "https://github.com/sergii-savchenko/meteor-inline-help.git"
 }
