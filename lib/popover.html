@@ -1,13 +1,28 @@
 <Template name="_helpPopover">
-
-<a id={{key}} class="show-help-link" data-toggle="popover" {{#if title}}title=
-  '{{title}}' {{/if}} data-content='{{#markdown}}{{message}}{{/markdown}} {{#if url}}<a href="{{url}}" class="btn btn-default btn-xs" target="_blank">Детальніше</a> {{/if}}'>
-    <i class="fa fa-question-circle show-help-icon"></i>
-  </a>
-  {{#if directCall}}
-    <script type="text/javascript">
-      InlineHelp._initPopover('{{key}}');
-    </script>
-  {{/if}}
-
+	{{#if title}}
+		{{#if url}}
+			<a id={{key}} class="show-help-link" data-toggle="popover" title='{{title}}' data-content='{{#markdown}}{{message}}{{/markdown}} <a href="{{url}}" class="btn btn-default btn-xs" target="_blank">Детальніше</a> '>
+				<i class="fa fa-question-circle show-help-icon"></i>
+		  	</a>
+		{{else}}
+			<a id={{key}} class="show-help-link" data-toggle="popover" title='{{title}}' data-content='{{#markdown}}{{message}}{{/markdown}} '>
+				<i class="fa fa-question-circle show-help-icon"></i>
+		  	</a>
+		{{/if}}
+	{{else}}
+		{{#if url}}
+			<a id={{key}} class="show-help-link" data-toggle="popover" data-content='{{#markdown}}{{message}}{{/markdown}} <a href="{{url}}" class="btn btn-default btn-xs" target="_blank">Детальніше</a> '>
+				<i class="fa fa-question-circle show-help-icon"></i>
+		  	</a>
+		{{else}}
+			<a id={{key}} class="show-help-link" data-toggle="popover" data-content='{{#markdown}}{{message}}{{/markdown}} '>
+				<i class="fa fa-question-circle show-help-icon"></i>
+		  	</a>
+		{{/if}}
+	{{/if}}
+  	{{#if directCall}}
+    	<script type="text/javascript">
+      		InlineHelp._initPopover('{{key}}');
+    	</script>
+  	{{/if}}
 </Template>
